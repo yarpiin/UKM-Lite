@@ -762,14 +762,14 @@ case "$1" in
 		
 		if [ -d "$MAXCPU" ]; then
 			$BB echo "8"
-		fi;
 		
-		if [ -d "$MAXCPU1" ]; then
+		elif [ -d "$MAXCPU1" ]; then
 			$BB echo "4"
-		fi;
 		
-		if [ -d "$MAXCPU2" ]; then
+		elif [ -d "$MAXCPU2" ]; then
 			$BB echo "6"
+		else
+			$BB echo "4"
 		fi;
 	;;
 	MinFreqIndex)
